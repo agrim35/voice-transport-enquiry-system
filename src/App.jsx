@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 // Layouts
 import MainLayout from './layouts/MainLayout';
@@ -17,7 +17,7 @@ import AdminRoutes from './pages/admin/Routes';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Public Routes with MainLayout */}
         <Route path="/" element={<MainLayout />}>
@@ -39,7 +39,7 @@ function App() {
         {/* Catch-all route */}
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
